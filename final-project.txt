@@ -1,0 +1,16 @@
+This year project is a simple web application to simulate the handling of pre-paid credit cards.
+You have to develop functionalities to:
+1. Create new credit cards
+2. Check card balance
+3. Decrease card availability (basically this simulates a purchase)
+4. Increase card availability (this simulates a recharge)
+
+All the data must be stored in a relational database (MySQL is fine)
+You have to manage login of merchant users (functions 3 and 4) and administrative user (functions 1, 3 and 4)
+Function 2 does not require login, anybody can check the balance given a card number.
+
+For the front-end you can use HTML/CSS/Javascript/jQuery
+For the back-end you must use a java EE application server and plain servlet/JSP or Spring-boot
+
+You can develop your project individually or in a group.
+
