@@ -1,0 +1,4 @@
+utente: utente@utente.it
+negoziante: negozio@negozio.it
+admin: admin@admin.it
+password per tutti i profili: password
