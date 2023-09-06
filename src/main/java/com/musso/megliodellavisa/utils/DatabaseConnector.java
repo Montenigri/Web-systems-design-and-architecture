@@ -6,22 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DatabaseConnector {
-    //Connection connection;
     private String url = "jdbc:mysql://localhost:3306/megliodellavisa";
     private String username = "root";
     private String password = "";
     public Connection getConnection(){
-/*
-        try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = (Connection) DriverManager.getConnection(this.url,this.username,this.password);
-        }
-        catch(SQLException sqlex){
-            sqlex.printStackTrace();
-        }catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-*/
+
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connection = DriverManager.getConnection(this.url,this.username,this.password);
@@ -36,6 +25,5 @@ public class DatabaseConnector {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        //return connection;
     }
 }
