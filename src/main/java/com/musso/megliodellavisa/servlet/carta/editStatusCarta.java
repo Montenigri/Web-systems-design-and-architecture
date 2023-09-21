@@ -10,13 +10,12 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Objects;
 
 @WebServlet(name = "editstatus", value = "/editstatus")
-public class editStatusCarta extends HttpServlet {
+public class EditStatusCarta extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.setAttribute("errors", new HashMap<>());
 
@@ -46,7 +45,7 @@ public class editStatusCarta extends HttpServlet {
             if(checkCarta==null){
                 String message = "Carta non esistente, impossibile proseguire, ";
                 request.setAttribute("message",message);
-                getServletContext().getRequestDispatcher("/WEB-INF/view/editCredito.jsp").forward(request, response);
+                getServletContext().getRequestDispatcher("/WEB-INF/view/EditCredito.jsp").forward(request, response);
             }
 
             try {

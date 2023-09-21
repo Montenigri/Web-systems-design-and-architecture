@@ -1,7 +1,6 @@
 package com.musso.megliodellavisa.servlet.utente;
 
 
-import com.musso.megliodellavisa.model.CartaService;
 import com.musso.megliodellavisa.model.Utente;
 import com.musso.megliodellavisa.model.UtenteService;
 import jakarta.servlet.ServletException;
@@ -12,13 +11,12 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Objects;
 
 @WebServlet(name = "cambiaruolo", value = "/cambiaruolo")
-public class cambiaRuolo extends HttpServlet {
+public class CambiaRuolo extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.setAttribute("errors", new HashMap<>());
         HttpSession session = request.getSession();

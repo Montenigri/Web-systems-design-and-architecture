@@ -1,0 +1,1 @@
+Il backup del database è presente in backupSql.sql e le credenziali di accesso ai vari account nel file credenziali, il software si aspetta che le credenziali del database siano quelle di default di xampp, con il campo di utente popolato con "root" e quello di password vuoto

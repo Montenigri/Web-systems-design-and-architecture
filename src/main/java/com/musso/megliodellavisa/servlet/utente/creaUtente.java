@@ -9,12 +9,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.HashMap;
 
 @WebServlet(name = "registrazione", value = "/registrazione")
-public class creaUtente extends HttpServlet {
+public class CreaUtente extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.setAttribute("errors", new HashMap<>());
         getServletContext().getRequestDispatcher("/WEB-INF/view/registrazione.jsp").forward(request, response);

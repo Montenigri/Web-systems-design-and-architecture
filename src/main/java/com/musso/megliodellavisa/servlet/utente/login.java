@@ -11,12 +11,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.HashMap;
 
 @WebServlet(name = "login", value = "/login")
-public class login extends HttpServlet {
+public class Login extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.setAttribute("errors", new HashMap<>());
         HttpSession session = request.getSession();

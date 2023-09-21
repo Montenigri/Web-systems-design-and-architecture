@@ -26,7 +26,7 @@
 </head>
 <body class="bg-gray-100 font-family-karla flex">
 
-<jsp:include page="../componenti/lateralNavbar.jsp"></jsp:include>
+<jsp:include page="../componenti/LateralNavbar.jsp"></jsp:include>
 
 
 <div class="relative w-full flex flex-col h-screen overflow-y-hidden">

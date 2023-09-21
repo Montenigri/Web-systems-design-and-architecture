@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Ago 31, 2023 alle 17:15
+-- Creato il: Set 11, 2023 alle 11:33
 -- Versione del server: 10.4.28-MariaDB
 -- Versione PHP: 8.2.4
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `megliodellavisa`
 --
+CREATE DATABASE IF NOT EXISTS `megliodellavisa` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `megliodellavisa`;
 
 -- --------------------------------------------------------
 
@@ -40,7 +42,7 @@ CREATE TABLE `carta` (
 
 INSERT INTO `carta` (`id`, `numeroCarta`, `attiva`, `creditoResiduo`) VALUES
 (1, '111111111', 0, 1163),
-(2, '111111112', 1, 150),
+(2, '111111112', 1, 183),
 (3, '111111113', 1, 10),
 (4, '111111114', 1, 10),
 (5, '111111115', 1, 10000);
@@ -64,12 +66,13 @@ CREATE TABLE `transazione` (
 --
 
 INSERT INTO `transazione` (`id`, `utente`, `timestamp`, `operazione`, `numerocarta`) VALUES
-(1, 'admin@admin.it', 1693401144846, '100', '111111111'),
-(2, 'admin@admin.it', 1693401156477, '-100', '111111111'),
+(1, 'admin@admin.it', 1693401144846, '100', ''),
+(2, 'admin@admin.it', 1693401156477, '-100', ''),
 (3, 'admin@admin.it', 1693474043583, '-100', '111111111'),
 (4, 'admin@admin.it', 1693474049449, '1000', '111111111'),
 (5, 'admin@admin.it', 1693493561366, '-11', '111111111'),
-(6, 'negozio@negozio.it', 1693494296677, '12', '111111111');
+(6, 'negozio@negozio.it', 1693494296677, '12', '111111111'),
+(7, 'admin@admin.it', 1693815648158, '33', '111111112');
 
 -- --------------------------------------------------------
 
@@ -93,7 +96,8 @@ CREATE TABLE `utente` (
 INSERT INTO `utente` (`id`, `nome`, `cognome`, `email`, `password`, `ruolo`) VALUES
 (1, 'Admin', 'Admin', 'admin@admin.it', '5f4dcc3b5aa765d61d8327deb882cf99', 'admin'),
 (2, 'negozio', 'negozio', 'negozio@negozio.it', '5f4dcc3b5aa765d61d8327deb882cf99', 'negoziante'),
-(3, 'utente', 'utente', 'utente@utente.it', '5f4dcc3b5aa765d61d8327deb882cf99', 'utente');
+(3, 'utente', 'utente', 'utente@utente.it', '5f4dcc3b5aa765d61d8327deb882cf99', 'utente'),
+(10, 'Stefano', 'Ciao', 'stefano@gmail.com', '32250170a0dca92d53ec9624f336ca24', 'admin');
 
 --
 -- Indici per le tabelle scaricate
@@ -132,13 +136,13 @@ ALTER TABLE `carta`
 -- AUTO_INCREMENT per la tabella `transazione`
 --
 ALTER TABLE `transazione`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT per la tabella `utente`
 --
 ALTER TABLE `utente`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
